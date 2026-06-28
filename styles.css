@@ -10,7 +10,7 @@
 }
 body {
     background-color: #000000;
-    background-image: url('./videos/background.jpg');
+    background-image: url('https://uc6b207aefe7275957116b5f449f.dl.dropboxusercontent.com/cd/0/inline/DDRW0mLlQpWsl_py6CU7cIh1F13_93LEJj82ckW-5bt-vpA3AMqnPaYbXSL2j4rrGTPUYBcmkIfVBVPpPgJfLS5jmYUb6SAC2UcVPc2DFRYKWoSWgSHnQI0j5I2LOvoOX7I/file#');
     background-size: 100% auto;
     background-position: center top;
     background-attachment: scroll;
@@ -47,7 +47,7 @@ body {
 }
 .logo-animation {
     width: 100%;
-    max-width: 620px;
+    max-width: 850px;
     height: auto;
     border-radius: 8px;
 }
