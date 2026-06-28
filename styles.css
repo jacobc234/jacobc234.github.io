@@ -1,0 +1,215 @@
+:root {
+    --bg: #0a0a0a;
+    --accent: #9b5de5;
+    --text: #e0e0e0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #000000;
+    background-image: url('./videos/background.jpg');
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    color: var(--text);
+    font-family: 'Arial', sans-serif;
+}
+/* Header */
+.header {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid transparent;
+    background-image:
+        linear-gradient(to right,
+            transparent 0%,
+            #7a4ac2 45%,
+            #7a4ac2 55%,
+            transparent 100%
+        );
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.header-content {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+.logo-animation {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    border-radius: 8px;
+}
+/* Background Animation */
+.bg-animation {
+    position: fixed;
+    top: 1%;
+    right: 20vh;
+    width: 210px;
+    height: auto;
+    border-radius: 12px;
+    opacity: 1;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+/* Gallery */
+.gallery {
+    padding: 30px 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    max-width: 1060px;
+    margin: 0 auto;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* ====================== LOADING SPINNER (No Text) ====================== */
+.video-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #222;
+    transition: all 0.4s ease;
+    aspect-ratio: 1 / 1;
+    background: #111;
+}
+
+.video-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.video-card.loaded::before {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Spinner */
+.video-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    border: 5px solid rgba(155, 93, 229, 0.3);
+    border-top-color: #9b5de5;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.video-card.loaded::after {
+    opacity: 0;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(155, 93, 229, 0.25);
+    border-color: var(--accent);
+}
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-card:hover .video {
+    transform: scale(1.04);
+}
+
+/* Mobile Active Video */
+.active-video {
+    transform: scale(1.06) !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 25px rgba(155, 93, 229, 0.6) !important;
+    z-index: 2;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+}
+.modal-video {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    border-radius: 12px;
+    background: #000;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+.close-btn {
+    position: absolute;
+    top: -60px;
+    right: 10px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+.close-btn:hover {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bg-animation {
+        width: 140px;
+        top: 20px;
+        right: 20px;
+    }
+    .header {
+        height: 160px;
+    }
+    .logo-animation {
+        max-width: 420px;
+    }
+    .grid-wrapper {
+        max-width: 340px;
+    }
+}

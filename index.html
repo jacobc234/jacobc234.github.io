@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jacob's Animations</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <video class="logo-animation"
+                   src="./videos/title.mp4"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   preload="auto">
+            </video>
+        </div>
+    </header>
+
+    <!-- Background Animation - Top Right -->
+    <video class="bg-animation"
+           src="./videos/bg1.mp4"
+           autoplay
+           loop
+           muted
+           playsinline
+           preload="auto">
+    </video>
+
+    <main class="gallery">
+        <div class="grid-wrapper">
+            
+            <div class="video-card"><video class="video" src="./videos/anim1.mp4"  loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim2.mp4"  loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim3.mp4"  loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim4.mp4"  loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim5.mp4"  loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim6.mp4"  loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim7.mp4"  loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim8.mp4"  loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim9.mp4"  loop playsinline preload="auto" poster="./videos/thumbnail9.jpg"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim10.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim11.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim12.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim13.mp4" loop playsinline preload="auto" poster="./videos/thumbnail13.jpg"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim14.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim15.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim16.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim17.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim18.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim19.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim20.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim21.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim22.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim23.mp4" loop playsinline preload="auto"></video></div>
+            <div class="video-card"><video class="video" src="./videos/anim24.mp4" loop playsinline preload="auto"></video></div>
+
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <video id="modal-video" class="modal-video" loop playsinline controls></video>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
